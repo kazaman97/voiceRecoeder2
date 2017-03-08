@@ -21,24 +21,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FgC-2s-9pL">
-                                <rect key="frame" x="172" y="254" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FgC-2s-9pL">
+                                <rect key="frame" x="152.5" y="316" width="70" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="nxc-FK-b1f"/>
+                                    <constraint firstAttribute="height" constant="40" id="sGc-GG-4Jo"/>
+                                </constraints>
                                 <state key="normal" title="録音"/>
                                 <connections>
                                     <action selector="recordButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZYk-Ng-dbD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lL8-dY-LPN">
-                                <rect key="frame" x="172" y="432" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lL8-dY-LPN">
+                                <rect key="frame" x="152.5" y="446" width="70" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="K3M-9p-eXB"/>
+                                    <constraint firstAttribute="height" constant="40" id="h9T-Cv-Mch"/>
+                                </constraints>
                                 <state key="normal" title="再生"/>
                                 <connections>
                                     <action selector="playButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xfl-mT-4t5"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLL-cS-5X0">
+                                <rect key="frame" x="62" y="100" width="250" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="FXS-Kw-nwO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rLL-cS-5X0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="9xI-2x-GFI"/>
+                            <constraint firstItem="lL8-dY-LPN" firstAttribute="top" secondItem="FgC-2s-9pL" secondAttribute="bottom" constant="90" id="WMu-z0-434"/>
+                            <constraint firstItem="FgC-2s-9pL" firstAttribute="top" secondItem="rLL-cS-5X0" secondAttribute="bottom" constant="180" id="Yjf-4e-ySb"/>
+                            <constraint firstItem="rLL-cS-5X0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dEC-YU-rw8"/>
+                            <constraint firstItem="lL8-dY-LPN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fRK-wY-bRh"/>
+                            <constraint firstItem="FgC-2s-9pL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qI2-lj-fGe"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="recordLabel" destination="FgC-2s-9pL" id="f2a-hI-K8R"/>

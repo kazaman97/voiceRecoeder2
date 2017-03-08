@@ -13,6 +13,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
+    var voicePlayer: AVAudioPlayer!
     
     @IBOutlet weak var recordLabel: UIButton!
     
@@ -25,7 +26,14 @@ class ViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     @IBAction func playButton(_ sender: Any) {
-        
+        let audioFilename = getDocumentsDirectory().appendingPathComponent("recording.m4a")
+        do {
+            let sound = try AVAudioPlayer(contentsOf: audioFilename)
+            voicePlayer = sound
+            sound.play()
+        } catch {
+            // couldn't load file
+        }
     }
     
     func startRecording() {
